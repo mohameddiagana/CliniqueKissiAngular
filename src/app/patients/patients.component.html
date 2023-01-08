@@ -1,0 +1,56 @@
+    <div class="container">
+        <div class="card">
+        <div class="card-header">LISTE DES PATIENT</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+
+                    <tr>
+                        <th>
+                            codep
+                        </th>
+                        <th>
+                            nom
+                        </th>
+                        <th>
+                            prenom
+                        </th>
+                        <th>
+                            email
+                        </th>
+                        <th>
+                            tel
+                        </th>
+                        <th>
+                            sexe
+                        </th>
+                        <th>
+                            datenaissance
+                        </th>
+                        <th>
+                            adresse
+                        </th>
+                    </tr>
+                    </thead>
+                <tbody>
+                   <tr *ngFor="let p of patients">
+                        <td>{{p.codep}}</td>
+                        <td>{{p.nom}}</td>
+                        <td>{{p.prenom}}</td>
+                         <td>{{p.email}}</td>
+                        <td>{{p.tel}}</td>
+                         <td>{{p.sexe}}</td>
+                        <td>{{p.datenaissance}}</td>
+                        <td>{{p.adresse}}</td>
+                        <td>
+                            <button (click)="handleDeletePatient(p)" class="btn btn-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                   </tr>
+                </tbody>
+
+            </table>
+            </div>
+            </div>
+            </div>
